@@ -1,1 +1,15 @@
 <h1>Welcome to the Wiki, <%= @user.name %>!</h1>
+
+<ul>
+<% @articles.each do |article| %>
+  <li>
+    <h2><a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a></h2>
+    <br/>
+    <p><%= "#{article.content}" %></p>
+    <br/>
+  </li>
+<% end %>
+</ul>
+
+
+<p><a href="/new_article">Write an Article</a></p>

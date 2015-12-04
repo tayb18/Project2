@@ -1,3 +1,3 @@
-class User < ActiveRecord::Based
+class User < ActiveRecord::Base
   has_many :articles
 end
