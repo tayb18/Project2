@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Sacramento);
+@import url(https://fonts.googleapis.com/css?family=Coming+Soon);
+
+body {
+  background-image: url('http://1.bp.blogspot.com/-kkbO9r-Vr2Q/VLS8jjXxO-I/AAAAAAAADgk/DR2VH1kpjy4/s1600/New%2Byork%2Bcity%2Bbridge%2Bhd%2Bdesktop%2Bbest%2Bwallpaper.jpg');
+  background-position: fixed;
+  background-repeat: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  padding-top: 60px;
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  color: #5d5b71;
+  font-size: 50px;
+  opacity: 1;
+}
+
+button { 
+  border: 0; 
+}
+
+.home {
+  padding-top: 5px;
+}
+
+.navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+
+.nav_btn {
+  text-decoration: none;
+  background-color: #ffffcc;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  font-size: 20px;
+}
+
+.nav {
+  background-color: rgb(255,255,255);
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  text-align: right;
+  display: inline;
+  font-size: 20px;
+}
+ 
+p.login_links {
+  text-align: center;
+  font-size: 25px;
+  color: #ccccff;
+  background-color: rgba(255,255,255,0.5);
+  margin-left: 40%;
+  margin-right: 40%;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: 'Coming Soon', cursive;
+}
+
+.login_links a {
+  text-decoration: none;
+  color: #5d5b71;
+}
+
+.login {
+  text-decoration: none;
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Coming Soon', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  color: #5d5b71;
+}
+
+.input {
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.body {
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  position: center;
+  list-style-type: none;
+}
+
+

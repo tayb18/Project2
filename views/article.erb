@@ -1,8 +1,27 @@
-<h1><%= "#{article.name}" %><h1>
+<% if @user %> 
 
-<%= "#{article.title}" %>
+<div class="nav"> 
+  <form action="/homepage" method="POST">
+    <p>Hello, <%= @user.name %></p>
+    <input type="hidden" name="_method" value="delete">
+    <button class="nav_btn">Log Out</button>
+  </form>
+  <p><a class="nav_btn" href="/homepage">Home</a></p> 
+</div>
+
+<% end %>
+
+<h1>NYC Street Meats: <br/> The Wiki</h1>
+
+<h1> <%= @this_article[:title] %> </h1>
+
+<%= @this_article[:title] %>
 <br/>
-<%= "#{article.content}" %>
+<%= @this_article[:content] %>
 <br/>
 
-<input typr="submit" placeholder="Update Article" href="/update_article">
+<p><a href="/articles/<%= @this_article.id %>/update_article">Update This Article</a></p>
+
+
+
+ 

@@ -1,15 +1,35 @@
-<h1>Welcome to the Wiki, <%= @user.name %>!</h1>
+<% if @user %> 
 
-<ul>
-<% @articles.each do |article| %>
-  <li>
-    <h2><a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a></h2>
-    <br/>
-    <p><%= "#{article.content}" %></p>
-    <br/>
-  </li>
+<div class="nav"> 
+  <ul class="navul">
+    <li class="navbar home"><a class="nav_btn" href="/homepage">Home</a></li>
+    <form action="/homepage" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <li class="navbar"><button class="nav_btn">Log Out</button></li>
+      <li class="navbar"><p>Hello, <%= @user.name %></p></li>
+    </form>
+  </ul>
+</div>
+
 <% end %>
-</ul>
+
+<div class="body">
+  <h1>Welcome to the Wiki!</h1>
+
+    <h2>Street Meat of New York City</h2>
+    <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a>
+        <br/>
+      </li>
+    <% end %>
+    </ul>
+
+</div>
+
+  <p><a href="/new_article">Write an Article</a></p>
 
 
-<p><a href="/new_article">Write an Article</a></p>
+
+ 

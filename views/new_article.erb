@@ -1,3 +1,13 @@
+<% if @user %> 
+ 
+<form action="/homepage" method="POST">
+  <p>Hello <%= @user.name %><p>
+  <input type="hidden" name="_method" value="delete">
+  <button>Log Out.</button>
+</form>
+
+<% end %>
+
 <h1>Create a New Article Here</h1>
 
 <form action="/new_article" method="POST">
@@ -10,6 +20,7 @@
   <br/>
   <input type="submit" name="submit" placeholder="Submit Article">
 </form>
+ 
+<p><a class="home" href="/homepage">Home</a></p> 
 
-
-
+ 
