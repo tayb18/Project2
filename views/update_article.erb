@@ -1,29 +1,32 @@
 <% if @user %> 
 
 <div class="nav"> 
-  <form action="/homepage" method="POST">
-    <p>Hello, <%= @user.name %></p>
-    <input type="hidden" name="_method" value="delete">
-    <button class="nav_btn">Log Out</button>
-  </form>
-  <p><a class="nav_btn" href="/homepage">Home</a></p> 
+  <ul class="navul">
+    <li class="navbar home"><a class="nav_btn" href="/homepage">Home</a></li>
+    <form action="/homepage" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <li class="navbar"><button class="nav_btn">Log Out</button></li>
+      <li class="navbar"><p>Hello, <%= @user.name %></p></li>
+    </form>
+  </ul>
 </div>
 
 <% end %>
 
-<h1>NYC Street Meats: <br/> The Wiki</h1>
+<div class="body">
+  <h1>Update an Article Here</h1>
 
-<h1>Update an Article Here</h1>
+  <div class="new_article">
+  <form action="/articles/<%= @article.id %>/update_article" method="POST">
+    <label class="label" for="title">Title: </label>
+    <input class="article_inputs title" type="text" name="title" id="title" value="<%= @article.title %>">
+    <br/>
+    <label class="label" for="content">Content: </label>
+    <input class="article_inputs content"type="text" name="content" id="content" value="<%= @article.content %>">
 
-<form action="/articles/<%= @article.id %>/update_article" method="POST">
-  <label for="title">Title: </label>
-  <input type="text" name="title" id="title" value="<%= @article.title %>">
-  <br/>
-  <label for="content">Content: </label>
-  <input type="text" name="content" id="content" value="<%= @article.content %>">
-
-  <br/>
-  <input type="submit" name="submit" placeholder="Update">
-</form> 
-
+    <br/>
+    <input class="login_links" type="submit" name="submit" placeholder="Update">
+  </form> 
+  </div>
+</div>
 

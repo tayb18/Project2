@@ -5,12 +5,15 @@ body {
   background-image: url('http://1.bp.blogspot.com/-kkbO9r-Vr2Q/VLS8jjXxO-I/AAAAAAAADgk/DR2VH1kpjy4/s1600/New%2Byork%2Bcity%2Bbridge%2Bhd%2Bdesktop%2Bbest%2Bwallpaper.jpg');
   background-position: fixed;
   background-repeat: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
   margin: 0;
   padding: 20px;
-  padding-top: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-family: 'Sacramento', cursive;
   text-align: center;
   color: #5d5b71;
@@ -18,12 +21,17 @@ h1 {
   opacity: 1;
 }
 
+h2 {
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+}
+
 button { 
   border: 0; 
 }
 
-.home {
-  padding-top: 5px;
+input {
+  border: 0;
 }
 
 .navul {
@@ -40,7 +48,7 @@ button {
 
 .nav_btn {
   text-decoration: none;
-  background-color: #ffffcc;
+  background-color: rgba(255,255,255,0.5);
   padding: 5px;
   border-radius: 10px;
   font-family: 'Coming Soon', cursive;
@@ -49,7 +57,7 @@ button {
 }
 
 .nav {
-  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,0.5);
   font-family: 'Coming Soon', cursive;
   color: #5d5b71;
   text-align: right;
@@ -57,21 +65,27 @@ button {
   font-size: 20px;
 }
  
-p.login_links {
+.login_links {
   text-align: center;
   font-size: 25px;
-  color: #ccccff;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.6);
   margin-left: 40%;
   margin-right: 40%;
   border-radius: 10px;
   padding: 5px;
   font-family: 'Coming Soon', cursive;
+  text-decoration: none;
+  list-style-type: none;
+  margin-top: 15px;
 }
 
 .login_links a {
   text-decoration: none;
   color: #5d5b71;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+
 }
 
 .login {
@@ -95,6 +109,93 @@ p.login_links {
   margin: 0 auto;
   position: center;
   list-style-type: none;
+  padding-top: 100px;
 }
 
+li {
+  list-style-type: none;
+}
 
+.login_link {
+  text-align: left;
+  position: left;
+  border: 0;
+}
+
+.articles a {
+  text-decoration: none;
+  color: #43225a;
+  font-family: 'Coming Soon', cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.articles {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.article_title {
+  text-decoration: none;
+  color: #43225a;
+  font-family: 'Coming Soon', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.article_body {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: rgba(255,255,255,0.6);
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.new_article {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.label {
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  text-align: left;
+  font-size: 30px;
+}
+
+.article_inputs {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  display: inline;
+  background-color: rgba(255,255,255,0.7);
+  vertical-align: top;
+  font-family: 'Coming Soon', cursive;
+  color: #5d5b71;
+  font-size: 15px;
+}
+
+.content {
+  height: 300px;
+  padding-bottom: 20px;
+
+}

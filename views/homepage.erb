@@ -17,18 +17,22 @@
   <h1>Welcome to the Wiki!</h1>
 
     <h2>Street Meat of New York City</h2>
-    <ul>
+    <ul class="articles">
     <% @articles.each do |article| %>
+      <div class="article_link">
       <li>
         <a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a>
         <br/>
       </li>
+      </div>
     <% end %>
     </ul>
 
+  <p><a class="login_links" href="/new_article">Write an Article</a></p>
+
 </div>
 
-  <p><a href="/new_article">Write an Article</a></p>
+
 
 
 

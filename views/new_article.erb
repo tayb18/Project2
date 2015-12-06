@@ -1,26 +1,33 @@
 <% if @user %> 
- 
-<form action="/homepage" method="POST">
-  <p>Hello <%= @user.name %><p>
-  <input type="hidden" name="_method" value="delete">
-  <button>Log Out.</button>
-</form>
+
+<div class="nav"> 
+  <ul class="navul">
+    <li class="navbar home"><a class="nav_btn" href="/homepage">Home</a></li>
+    <form action="/homepage" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <li class="navbar"><button class="nav_btn">Log Out</button></li>
+      <li class="navbar"><p>Hello, <%= @user.name %></p></li>
+    </form>
+  </ul>
+</div>
 
 <% end %>
 
-<h1>Create a New Article Here</h1>
+<div class="body">
+  <h1>Create a New Article Here</h1>
 
-<form action="/new_article" method="POST">
-  <label for="title">Title: </label>
-  <input type="text" name="title" id="title">
-  <br/>
-  <label for="content">Content: </label>
-  <input type="text" name="content" id="content">
+  <div class="new_article">
+  <form action="/new_article" method="POST">
+    <label class="label" for="title">Title: </label>
+    <input class="article_inputs title" type="text" name="title" id="title">
+    <br/>
+    <label class="label" for="content">Content: </label>
+    <input class="article_inputs content" type="text" name="content" id="content">
 
-  <br/>
-  <input type="submit" name="submit" placeholder="Submit Article">
-</form>
- 
-<p><a class="home" href="/homepage">Home</a></p> 
-
- 
+    <br/>
+    <input class="login_links" type="submit" name="submit" placeholder="Submit Article">
+  </form>
+  </div>
+   
+</div>
+   
