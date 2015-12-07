@@ -18,9 +18,9 @@
   <div class="article_body">
     <p class="article_title"> <%= @this_article[:title] %> </p>
     <p class="article_author">By: <%= @find_author[:name] %></p> 
-    <p>Categories: <%= @category %></p>
+    <p>Categories: <%= @category[:name] %></p>
     <br/>
-    <p class="article_content"><%= @this_article[:content] %></p>
+    <p class="article_content"> <%= $markdown.render(@this_article[:content]) %></p>
     <br/>
   </div>
   <p class="login_links"><a href="/articles/<%= @this_article.id %>/update_article">Update This Article</a></p>

@@ -2,6 +2,7 @@ module App
   class Server < Sinatra::Base
     set :method_override, true
     enable :sessions
+    $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
     get "/" do
       @user = User.find(session[:user_id]) if session[:user_id]
@@ -66,9 +67,11 @@ module App
     end
 
     get "/articles/:id" do
+      redirect to "/" if !session[:user_id]
       @user = User.find(session[:user_id])
       @this_article = Article.find(params[:id])
       @find_author = User.find(@this_article[:user_id])
+      @category = Category.find(params[:id])
 
       erb :article
     end
@@ -80,6 +83,8 @@ module App
     end
 
     post "/articles/:id/update_article" do
+      category = Category.find(params[:id])
+      category.update({name: params[:name]})
       article = Article.find(params[:id])
       article.update({title: params[:title], content: params[:content]})
       redirect to "/homepage"
