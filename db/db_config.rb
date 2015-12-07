@@ -19,7 +19,7 @@ if ENV['RACK_ENV'] == 'production'
 else
   db_config = {
     :adapter  => 'sqlite3',
-    :database => 'db/database.sqlite3'
+    :database => 'db/streetmeat.sqlite3'
   }
 end
 

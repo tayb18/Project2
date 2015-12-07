@@ -10,8 +10,8 @@ DROP TABLE IF EXISTS articles_categories;
 CREATE TABLE articles (
   id INTEGER PRIMARY KEY,
   user_id INTEGER,
-  date_created DATE,
-  date_edited DATE,
+  date_created DATETIME,
+  date_edited DATETIME,
   title VARCHAR,
   content TEXT
 );

@@ -21,7 +21,7 @@ User.create(users)
 
 
 articles = [
-  {title: "The One. The Only. The Rafiqi's at N. Union Square.", content: "Kittens kittens pigeon pigeon pop app, puppy pegasus surprise surprise. Rainbows kittens rainbows rainbows pony delight, app wereunicorn puppy puppy. Pigeon pop pigeon, pop pigeon wereunicorn pony pegasus social pop pop pony. Surprise unicorn rainbows pigeon puppy pegasus pegasus pigeon delight. Pop pony surprise pegasus puppy social pop, pegasus app puppy wereunicorn pop.
+  {title: "The One. The Only. The Rafiqi's at N. Union Square.", user_id: 1,content: "Kittens kittens pigeon pigeon pop app, puppy pegasus surprise surprise. Rainbows kittens rainbows rainbows pony delight, app wereunicorn puppy puppy. Pigeon pop pigeon, pop pigeon wereunicorn pony pegasus social pop pop pony. Surprise unicorn rainbows pigeon puppy pegasus pegasus pigeon delight. Pop pony surprise pegasus puppy social pop, pegasus app puppy wereunicorn pop.
 
     Social pop delight rainbows puppy, pegasus rainbows rainbows wereunicorn rainbows wereunicorn puppy pony rainbows. Surprise unicorn app, pigeon unicorn delight delight pegasus wereunicorn wereunicorn unicorn unicorn. Pony social pop unicorn puppy pegasus pop rainbows delight unicorn, pegasus rainbows unicorn surprise. App pigeon social surprise kittens, social pegasus app kittens unicorn. Unicorn pegasus kittens pegasus, rainbows surprise pop rainbows rainbows puppy.
 
@@ -37,13 +37,13 @@ images = [
 Image.create(images)
 
 
-articles_users = [
-  {article_id: 1, user_is: 1}
-]
-Article_User.create(articles_users)
+# articles_users = [
+#   {article_id: 1, user_id: 1}
+# ]
+# Article_User.create(articles_users)
 
 
-articles_categories = [
-  {article_id: 1, category_id: 1}
-]
-Article_Category.create(articles_categories)
+# articles_categories = [
+#   {article_id: 1, category_id: 1}
+# ]
+# Article_Category.create(articles_categories)
