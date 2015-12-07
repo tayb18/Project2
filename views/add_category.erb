@@ -14,16 +14,23 @@
 <% end %>
 
 <div class="body">
-  <h1>NYC Street Meats: <br/> The Wiki</h1>
+  <h1>Add a Category</h1>
+  
+  <div class="category_input">
+  <form action="/articles/:id/add_category" method="POST"> 
+    <label class="p" for="add_category">Add Category: </label>
+    <input class="input" type="text" name="add_category" id="add_category">
+    <input class="login_links btn" type="submit" name="submit" placeholder="Update">
+  </form>
+  </div>
+
   <div class="article_body">
     <p class="article_title"> <%= @this_article[:title] %> </p>
     <p class="article_author"> <b>By:</b> <%= @find_author[:name] %> || <b>Categories:</b> <%= @category[:name] %> || <%= @this_article.date_created %> </p>
     <p class="article_content"> <%= $markdown.render(@this_article[:content]) %></p>
     <br/>
   </div>
-  <p class="login_links"><a href="/articles/<%= @this_article.id %>/update_article">Update This Article</a></p>
-  <p class="login_links"><a href="/articles/<%= @this_article.id %>/add_category">Add a Category</a></p>
 </div>
 
 
-   
+</div>

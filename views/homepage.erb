@@ -2,35 +2,36 @@
 
 <div class="nav"> 
   <ul class="navul">
-    <li class="navbar home"><a class="nav_btn" href="/homepage">Home</a></li>
     <form action="/homepage" method="POST">
       <input type="hidden" name="_method" value="delete">
       <li class="navbar"><button class="nav_btn">Log Out</button></li>
-      <li class="navbar"><p>Hello, <%= @user.name %></p></li>
     </form>
   </ul>
+  <a class="navbar nav_btn" href="/new_article">Write an Article</a>
+  <li class="navbar"><a class="nav_btn" href="/homepage">Home</a></li>
+  <li class="hello"><p>Hello, <%= @user.username %></p></li> 
 </div>
 
 <% end %>
 
 <div class="body">
-  <h1>Welcome to the Wiki!</h1>
+    <h1>Welcome to the Wiki!</h1>
 
-    <h2>Street Meat of New York City</h2>
-    <ul class="articles">
-    <% @articles.each do |article| %>
-      <div class="article_link">
-      <li>
-        <a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a>
+      <h2>Street Meat of New York City</h2>
+      <ul class="articles">
+      <% @articles.each do |article| %>
+        <div class="article_link">
+        <li>
+          <a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a>
+        </li>
         <br/>
-      </li>
-      </div>
-    <% end %>
-    </ul>
+        </div>
+      <% end %>
+      </ul>
 
-  <p><a class="login_links" href="/new_article">Write an Article</a></p>
+</div> 
 
-</div>
+
 
 
 

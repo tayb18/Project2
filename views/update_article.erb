@@ -22,7 +22,7 @@
     <input class="article_inputs title" type="text" name="title" id="title" value="<%= @article.title %>">
     <br/>
     <label class="label" for="category">Category:</label>
-    <input class="article_inputs" type="text" name="name" id="category">
+    <input class="article_inputs" type="text" name="name" id="category" value="<%= @category.name %>">
     <br/>
     <label class="label" for="content">Content: </label>
     <textarea rows="20" cols="200" class="article_inputs content" type="text" name="content" id="content"><%= @article.content %></textarea>
