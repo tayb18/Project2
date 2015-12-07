@@ -1,4 +1,4 @@
-require_relative "../config"
+require_relative "../db_config"
 
 class CreateArticlesCategories < ActiveRecord::Migration
 
