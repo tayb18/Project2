@@ -53,18 +53,22 @@ module App
 
     get "/new_article" do
       @user = User.find(session[:user_id])
+
       erb :new_article
     end
 
     post "/new_article" do
-      article = Article.create({title: params[:title], content: params[:content], id: params[:id]})
-
-      redirect to "/articles/:id"
+      category = Category.find_by(name: params[:name]) || Category.create({name: params[:name]})
+      article = Article.create({title: params[:title], content: params[:content], user_id: session[:user_id]})
+      article.categories.push(category)
+      article.save
+      redirect to "/homepage"
     end
 
     get "/articles/:id" do
       @user = User.find(session[:user_id])
       @this_article = Article.find(params[:id])
+      @find_author = User.find(@this_article[:user_id])
 
       erb :article
     end
@@ -76,8 +80,9 @@ module App
     end
 
     post "/articles/:id/update_article" do
-      article = Article.create({title: params[:title], content: params[:content]})
-      redirect to "/articles/:id"
+      article = Article.find(params[:id])
+      article.update({title: params[:title], content: params[:content]})
+      redirect to "/homepage"
     end
 
   end #class
