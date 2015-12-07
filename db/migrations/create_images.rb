@@ -4,7 +4,7 @@ class CreateImages < ActiveRecord::Migration
 
   def up
     create_table(:images) do |t|
-      t.varchar(:name)
+      t.string(:name)
       t.text(:img_url)
       t.integer(:article_id)
     end

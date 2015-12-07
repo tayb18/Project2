@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration
       t.integer(:user_id)
       t.date(:date_created)
       t.date(:date_edited)
-      t.varchar(:title)
+      t.string(:title)
       t.text(:content)
     end
   end

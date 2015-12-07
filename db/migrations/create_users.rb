@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration
 
   def up
     create_table(:users) do |t|
-      t.varchar(:name)
-      t.varchar(:user_name)
+      t.string(:name)
+      t.string(:user_name)
     end
   end
 
