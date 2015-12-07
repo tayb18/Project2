@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 require 'sinatra'
 require 'redcarpet'
 
