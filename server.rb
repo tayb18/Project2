@@ -1,4 +1,4 @@
-module App 
+module App  
   class Server < Sinatra::Base
     set :method_override, true
     enable :sessions
@@ -18,7 +18,7 @@ module App
     post "/sessions" do
       # get the user's name from params
       # find the user's info from the db
-      user = User.find_by({username: params[:username]})
+      user = User.find_by({username: params[:username]}).try(:authenticate, params[:password])
       # put the user's id in session
       if user
         session[:user_id] = user.id
@@ -34,7 +34,7 @@ module App
     end
 
     post "/users" do
-      User.create({name: params[:name], username: params[:username]})
+      User.create({name: params[:name], username: params[:username], password: params[:password], password_confirmation: params[:password_confirmation]})
       redirect to "/login"
     end
 

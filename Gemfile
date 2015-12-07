@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "redcarpet"
 gem "sinatra"
+gem "bcrypt"
 gem "activerecord"
 group :development do 
   gem "sqlite3"
