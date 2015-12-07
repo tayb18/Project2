@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "redcarpet"
 gem "sinatra"
 gem "activerecord"
 group :development do 
