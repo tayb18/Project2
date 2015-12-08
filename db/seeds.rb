@@ -14,8 +14,8 @@ Category.create(categories)
 
 
 users = [
-  {name: "Taylor Basso", username: "Tayb18"},
-  {name: "Joseph Smith", username: "JesusIsMyHomeBoi"}
+  {name: "Taylor Basso", username: "Tayb18", password_digest: "iloveyou"},
+  {name: "Joseph Smith", username: "JesusIsMyHomeBoi", password_digest: "iloveyou"}
 ]
 User.create(users)
 

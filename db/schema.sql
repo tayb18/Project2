@@ -19,7 +19,8 @@ CREATE TABLE articles (
 CREATE TABLE users (
   id INTEGER PRIMARY KEY,
   name VARCHAR,
-  username VARCHAR
+  username VARCHAR,
+  password_digest VARCHAR
 );
 
 CREATE TABLE images (

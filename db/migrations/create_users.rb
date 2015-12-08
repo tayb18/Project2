@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       t.string(:name)
       t.string(:username)
+      t.string(:password_digest)
     end
   end
 
@@ -14,5 +15,5 @@ class CreateUsers < ActiveRecord::Migration
   end
 
 end
-
+ 
 CreateUsers.migrate(ARGV[0])
