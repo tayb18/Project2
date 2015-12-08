@@ -14,29 +14,16 @@
 </div>
 
 <% end %>
- 
+
 <div class="body">
-    <h1>Welcome to the Wiki!</h1>
-
-      <h2>Street Meat of New York City</h2>
-      <div class="articles_div">
-        <ul class="articles_body">
-        <% @articles.each do |article| %>
-          <div class="article_link">
-          <li>
-            <a href="/articles/<%= article.id %>"><%= "#{article.title}" %></a>
-          </li>
-          <br/>
-          </div>
-        <% end %>
-        </ul>
-      </div>
-</div> 
-
-
-
-
-
-
-
- 
+  <h2>Articles With the <%= @category.name %> Category</h2>
+  <div class="articles_div">
+    <% @articles.each do |article| %>
+      <ul>
+        <li>
+          <a href="/articles/<%= article.id %>" ><%= article.title %></a>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>

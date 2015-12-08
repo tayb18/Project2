@@ -53,6 +53,7 @@ module App
     end
 
     get "/new_article" do
+      redirect to "/" if !session[:user_id]
       @user = User.find(session[:user_id])
 
       erb :new_article
@@ -78,6 +79,7 @@ module App
     end
 
     get "/articles/:id/update_article" do
+      redirect to "/" if !session[:user_id]
       @user = User.find(session[:user_id])
       @article = Article.find(params[:id])
       @category = Category.find(params[:id])
@@ -93,6 +95,7 @@ module App
     end
 
     get "/articles/:id/add_category" do
+      redirect to "/" if !session[:user_id]
       redirect to "/" if !session[:user_id]
       @user = User.find(session[:user_id])
       @this_article = Article.find(params[:id])
@@ -111,6 +114,21 @@ module App
       article.save
 
       redirect to "/articles/:id"
+    end
+
+    get "/categories" do
+      redirect to "/" if !session[:user_id]
+      @categories = Category.all
+
+      erb :categories
+    end
+
+    get "/categories/:id" do
+      redirect to "/" if !session[:user_id]
+      @category = Category.find(params[:id])
+      @articles = @category.articles
+
+      erb :category
     end
 
   end #class

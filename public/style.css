@@ -45,6 +45,10 @@ input {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .input {
   border-radius: 10px;
   padding: 13px;
@@ -191,6 +195,23 @@ li {
   font-family: 'Coming Soon', cursive;
   font-size: 30px;
   font-weight: bold;
+}
+
+.articles_div {
+  text-decoration: none;
+  text-align: center;
+  padding-top: 2px;
+  font-family: 'Coming Soon', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: #5d5b71;
+  height: 50%;
+  width: 75%;
+  position: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 10px;
 }
 
 .articles {
