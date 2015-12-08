@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Sacramento);
 @import url(https://fonts.googleapis.com/css?family=Coming+Soon);
 
+@charset "UTF-8";
+
 body {
   background-image: url('http://1.bp.blogspot.com/-kkbO9r-Vr2Q/VLS8jjXxO-I/AAAAAAAADgk/DR2VH1kpjy4/s1600/New%2Byork%2Bcity%2Bbridge%2Bhd%2Bdesktop%2Bbest%2Bwallpaper.jpg');
   background-position: fixed;
@@ -31,7 +33,7 @@ h2 {
   color: #5d5b71;
   font-size: 20px;
 }
-
+ 
 .category_input {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -47,6 +49,24 @@ input {
 
 a {
   text-decoration: none;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content {
+  position: relative;
+  top: 33%;
+  background-color: white;
+  width: 40%;
+  margin: 0 30%;
 }
 
 .input {
