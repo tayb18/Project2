@@ -5,14 +5,14 @@ module App
     $markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
     get "/" do
-      @user = User.find(session[:user_id]) if session[:user_id]
+      # @user = User.find(session[:user_id]) if session[:user_id]
       erb :index
     end
 
     get "/login" do
       erb :login
     end
-
+ 
     # this should happen when the user types in their name
     # and clicks "login!"
     post "/sessions" do
