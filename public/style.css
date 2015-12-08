@@ -45,6 +45,27 @@ input {
   border: 0;
 }
 
+.input {
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.input_1 {
+  width: 420px;
+}
+
+.input_2 {
+  width: 362px;  
+}
+
+.input_3 {
+  width: 370px;  
+}
+
+.input_4 {
+  width: 250px; 
+}
+
 .navul {
     list-style-type: none;
     margin: 0;
@@ -75,12 +96,13 @@ input {
 
 .btn {
   text-decoration: none;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgb(255,255,255);
   padding: 5px;
   border-radius: 10px;
   font-family: 'Coming Soon', cursive;
   color: #5d5b71;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .nav {
@@ -118,16 +140,30 @@ input {
 .login {
   text-decoration: none;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 2px;
   font-family: 'Coming Soon', cursive;
   font-size: 30px;
   font-weight: bold;
   color: #5d5b71;
+  height: 400px;
+  width:600px;
+  position: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(252, 206, 135,0.6);
+  border-radius: 10px;
 }
 
-.input {
-  border-radius: 10px;
-  padding: 13px;
+.align_logins label{
+/*  float: left;*/
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.align_logins input{
+/*  float: left;*/
+  margin-right: 20px;
+/*  width: 40%;*/
 }
 
 .body {

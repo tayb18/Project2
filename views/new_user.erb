@@ -6,13 +6,24 @@
 
   <div class="login">
     <h2>Sign up to join the Wiki</h2>
-
+    
+    <div class="align_logins">
     <form action="/users" method="POST">
       <label for="name">Name: </label>
-      <input class="input" type="text" name="name" id="name">
+      <input class="input input_1" type="text" name="name" id="name">
+      <br/>
       <label for="username">Username: </label>
-      <input class="input" type="text" name="username" id="username">
+      <input class="input input_2" type="text" name="username" id="username">
+      <br/>
+      <label for="password">Password: </label>
+      <input class="input input_3" type="password" name="password">
+      <br/>
+      <label for="password_confirmation">Confirm Password: </label>
+      <input class="input input_4" type="password" name="password_confiirmation">
+      <br/>
       <button class="btn">Sign Up</button>
     </form>
+    </div>
+
   </div> 
 </div>
